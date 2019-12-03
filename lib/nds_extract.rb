@@ -10,15 +10,17 @@ def directors_totals(nds)
   # The Hash result be full of things like "Jean-Pierre Jeunet" => "222312123123"
   result = {}
 
-  nds.each do |directors_info|
+  nds.each do |directors_database|
 
     total = 0
-    directors_info[:movies].each do |movie|
+
+    directors_database[:movies].each do |movie|
+
     total += [:worldwide_gross]
 
   end
 
-  result[director_info[:name]] = total
+  result[directors_database[:name]] = total
 
 end
 
@@ -32,5 +34,5 @@ return result
   #
   #
   # Be sure to return the result at the end!
-  
+
 end
